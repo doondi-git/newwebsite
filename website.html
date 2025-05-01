@@ -4,9 +4,11 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Durga Vivek KDoondi - Portfolio</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
     <style>
-        @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
-        
+        /* CSS Variables */
         :root {
             --primary: #2b6cb0;
             --secondary: #4299e1;
@@ -17,6 +19,7 @@
             --text: #2d3748;
         }
         
+        /* Base Styles */
         * {
             margin: 0;
             padding: 0;
@@ -30,11 +33,34 @@
             line-height: 1.7;
         }
         
+        /* Layout */
         .container {
             width: 100%;
             max-width: 1200px;
             margin: 0 auto;
             padding: 0 1rem;
+        }
+        
+        section {
+            padding: 4rem 0;
+        }
+        
+        .section-title {
+            font-size: 2rem;
+            font-weight: 600;
+            margin-bottom: 2rem;
+            text-align: center;
+            position: relative;
+        }
+        
+        .section-title::after {
+            content: "";
+            display: block;
+            width: 80px;
+            height: 4px;
+            background: var(--primary);
+            margin: 0.5rem auto 0;
+            border-radius: 2px;
         }
         
         /* Header Styles */
@@ -53,7 +79,7 @@
             left: 0;
             width: 100%;
             height: 100%;
-            background: url('/api/placeholder/1200/400') center/cover;
+            background: url('https://via.placeholder.com/1200x400') center/cover;
             opacity: 0.1;
             z-index: 0;
         }
@@ -129,7 +155,7 @@
             transform: translateY(-3px);
         }
         
-        /* Nav Styles */
+        /* Navigation */
         nav {
             background-color: white;
             box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
@@ -159,29 +185,6 @@
         
         .nav-links li a:hover {
             color: var(--primary);
-        }
-        
-        /* Section Styles */
-        section {
-            padding: 4rem 0;
-        }
-        
-        .section-title {
-            font-size: 2rem;
-            font-weight: 600;
-            margin-bottom: 2rem;
-            text-align: center;
-            position: relative;
-        }
-        
-        .section-title::after {
-            content: "";
-            display: block;
-            width: 80px;
-            height: 4px;
-            background: var(--primary);
-            margin: 0.5rem auto 0;
-            border-radius: 2px;
         }
         
         /* About Section */
@@ -225,6 +228,10 @@
         }
         
         /* Education Section */
+        .education-section {
+            background-color: var(--accent);
+        }
+        
         .timeline {
             position: relative;
             max-width: 800px;
@@ -346,6 +353,10 @@
         }
         
         /* Projects Section */
+        .projects-section {
+            background-color: var(--accent);
+        }
+        
         .projects-grid {
             display: grid;
             grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
@@ -460,6 +471,10 @@
         }
         
         /* Activities Section */
+        .activities-section {
+            background-color: var(--accent);
+        }
+        
         .activities-container {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
@@ -481,82 +496,6 @@
         
         .activity-description {
             font-size: 0.95rem;
-        }
-        
-        /* Contact Section */
-        .contact-container {
-            display: flex;
-            flex-wrap: wrap;
-            gap: 2rem;
-        }
-        
-        .contact-info-container {
-            flex: 1;
-            min-width: 300px;
-        }
-        
-        .contact-form-container {
-            flex: 2;
-            min-width: 300px;
-        }
-        
-        .contact-info-item {
-            display: flex;
-            align-items: center;
-            gap: 1rem;
-            margin-bottom: 1.5rem;
-        }
-        
-        .contact-icon {
-            width: 40px;
-            height: 40px;
-            background-color: var(--accent);
-            color: var(--primary);
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            border-radius: 50%;
-            font-size: 1.2rem;
-        }
-        
-        .form-group {
-            margin-bottom: 1.5rem;
-        }
-        
-        .form-group label {
-            display: block;
-            margin-bottom: 0.5rem;
-            font-weight: 500;
-        }
-        
-        .form-control {
-            width: 100%;
-            padding: 0.75rem;
-            border-radius: 6px;
-            border: 1px solid #cbd5e0;
-            font-family: 'Poppins', sans-serif;
-        }
-        
-        textarea.form-control {
-            min-height: 150px;
-            resize: vertical;
-        }
-        
-        .btn {
-            display: inline-block;
-            padding: 0.75rem 2rem;
-            background-color: var(--primary);
-            color: white;
-            border: none;
-            border-radius: 6px;
-            font-weight: 500;
-            cursor: pointer;
-            transition: all 0.3s ease;
-        }
-        
-        .btn:hover {
-            background-color: var(--secondary);
-            transform: translateY(-2px);
         }
         
         /* Footer */
@@ -601,7 +540,7 @@
             color: rgba(255, 255, 255, 0.7);
         }
         
-        /* Responsive */
+        /* Responsive Design */
         @media (max-width: 768px) {
             .header-content {
                 flex-direction: column-reverse;
@@ -635,7 +574,6 @@
             }
         }
     </style>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/js/all.min.js"></script>
 </head>
 <body>
     <!-- Header Section -->
@@ -661,7 +599,6 @@
                 <div class="social-links">
                     <a href="https://www.linkedin.com/in/karicherla-doondi-durga-vivek-789923272/" title="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
                     <a href="https://github.com/doondi-git" title="GitHub"><i class="fab fa-github"></i></a>
-                    <!-- <a href="#" title="Twitter"><i class="fab fa-twitter"></i></a> -->
                 </div>
             </div>
             <div class="profile-image">
@@ -680,7 +617,6 @@
                 <li><a href="#projects">Projects</a></li>
                 <li><a href="#certifications">Certifications</a></li>
                 <li><a href="#activities">Activities</a></li>
-                <!-- <li><a href="#contact">Contact</a></li> -->
             </ul>
         </div>
     </nav>
@@ -693,7 +629,6 @@
                 <div class="about-text">
                     <p>I am a passionate Computer Science Engineering student at KL University with strong expertise in Full Stack Development, DevOps practices, and emerging FinTech solutions. Through internships, certifications, and personal projects, I have gained hands-on experience in building scalable web applications, automating deployment pipelines, and understanding the technological landscape of financial services.</p>
                     <p>As a fresher in the tech industry, my goal is to leverage both development and DevOps skills to create innovative, secure, and efficient solutions that address real-world challenges. I enjoy working in dynamic, team-driven environments and continuously seek opportunities to learn, adapt, and grow in the ever-evolving tech ecosystem.</p>
-                    
                 </div>
                 <div class="skills-container">
                     <div class="skill-categories">
@@ -702,7 +637,6 @@
                             <div class="skills-list">
                                 <span class="skill-tag">Java</span>
                                 <span class="skill-tag">C</span>
-                                <!-- <span class="skill-tag">C++</span> -->
                                 <span class="skill-tag">SQL</span>
                                 <span class="skill-tag">JavaScript</span>
                                 <span class="skill-tag">Python</span>
@@ -744,7 +678,7 @@
     </section>
     
     <!-- Education Section -->
-    <section id="education" style="background-color: var(--accent);">
+    <section id="education" class="education-section">
         <div class="container">
             <h2 class="section-title">Education</h2>
             <div class="timeline">
@@ -814,7 +748,7 @@
     </section>
     
     <!-- Projects Section -->
-    <section id="projects" style="background-color: var(--accent);">
+    <section id="projects" class="projects-section">
         <div class="container">
             <h2 class="section-title">Projects</h2>
             <div class="projects-grid">
@@ -893,60 +827,74 @@
             </div>
         </div>
     </section>
+    
     <!-- Certifications Section -->
-<section id="certifications">
-    <div class="container">
-        <h2 class="section-title">Certifications</h2>
-        <div class="certifications-container">
-            <div class="certification-card">
-                <div class="certification-icon">
-                    <i class="fas fa-certificate"></i>
+    <section id="certifications">
+        <div class="container">
+            <h2 class="section-title">Certifications</h2>
+            <div class="certifications-container">
+                <div class="certification-card">
+                    <div class="certification-icon">
+                        <i class="fas fa-certificate"></i>
+                    </div>
+                    <h3 class="certification-title">FindTech Professional Certificate</h3>
+                    <div class="certification-date">November 2024</div>
                 </div>
-                <h3 class="certification-title">FindTech Professional Certificate</h3>
-                <div class="certification-date">November 2024</div>
-            </div>
-            <div class="certification-card">
-                <div class="certification-icon">
-                    <i class="fas fa-certificate"></i>
+                <div class="certification-card">
+                    <div class="certification-icon">
+                        <i class="fas fa-certificate"></i>
+                    </div>
+                    <h3 class="certification-title">Red Hat Certified</h3>
+                    <div class="certification-date">July 2024</div>
                 </div>
-                <h3 class="certification-title">Red Hat Certified</h3>
-                <div class="certification-date">July 2024</div>
-            </div>
-            <div class="certification-card">
-                <div class="certification-icon">
-                    <i class="fas fa-certificate"></i>
+                <div class="certification-card">
+                    <div class="certification-icon">
+                        <i class="fas fa-certificate"></i>
+                    </div>
+                    <h3 class="certification-title">Salesforce AI Associate</h3>
+                    <div class="certification-date">October 2024</div>
                 </div>
-                <h3 class="certification-title">Salesforce AI Associate</h3>
-                <div class="certification-date">October 2024</div>
-            </div>
-            <div class="certification-card">
-                <div class="certification-icon">
-                    <i class="fas fa-certificate"></i>
+                <div class="certification-card">
+                    <div class="certification-icon">
+                        <i class="fas fa-certificate"></i>
+                    </div>
+                    <h3 class="certification-title">Salesforce AI Specialist</h3>
+                    <div class="certification-date">October 2024</div>
                 </div>
-                <h3 class="certification-title">Salesforce AI Specialist</h3>
-                <div class="certification-date">October 2024</div>
             </div>
         </div>
-    </div>
-</section>
-
-<!-- Activities Section -->
-<section id="activities" style="background-color: var(--accent);">
-    <div class="container">
-        <h2 class="section-title">Extracurricular Activities</h2>
-        <div class="activities-container">
-            <div class="activity-card">
-                <h3 class="activity-title">NSS Core Member</h3>
-                <p class="activity-description">Organized over five community service events, benefiting more than 500 local residents.</p>
-            </div>
-            <div class="activity-card">
-                <h3 class="activity-title">NCC (A Certificate Holder)</h3>
-                <p class="activity-description">Completed over 200 hours of leadership and discipline training.</p>
-            </div>
-            <div class="activity-card">
-                <h3 class="activity-title">Technical Workshops & Hackathons</h3>
-                <p class="activity-description">Participated in various technical workshops and hackathons to enhance skills and knowledge.</p>
+    </section>
+    
+    <!-- Activities Section -->
+    <section id="activities" class="activities-section">
+        <div class="container">
+            <h2 class="section-title">Extracurricular Activities</h2>
+            <div class="activities-container">
+                <div class="activity-card">
+                    <h3 class="activity-title">NSS Core Member</h3>
+                    <p class="activity-description">Organized over five community service events, benefiting more than 500 local residents.</p>
+                </div>
+                <div class="activity-card">
+                    <h3 class="activity-title">NCC (A Certificate Holder)</h3>
+                    <p class="activity-description">Completed over 200 hours of leadership and discipline training.</p>
+                </div>
+                <div class="activity-card">
+                    <h3 class="activity-title">Technical Workshops & Hackathons</h3>
+                    <p class="activity-description">Participated in various technical workshops and hackathons to enhance skills and knowledge.</p>
+                </div>
             </div>
         </div>
-    </div>
-</section>
+    </section>
+    
+    <!-- Footer -->
+    <footer>
+        <div class="container footer-content">
+            <div class="footer-social">
+                <a href="https://www.linkedin.com/in/karicherla-doondi-durga-vivek-789923272/" title="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+                <a href="https://github.com/doondi-git" title="GitHub"><i class="fab fa-github"></i></a>
+            </div>
+            <p class="copyright">© 2024 Durga Vivek KDoondi. All rights reserved.</p>
+        </div>
+    </footer>
+</body>
+</html>
